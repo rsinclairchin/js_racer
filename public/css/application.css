@@ -1,0 +1,34 @@
+table {
+  outline: 3px solid black;
+}
+
+td {
+  outline: 1px solid black;
+  height: 100px;
+  width: 100px;
+}
+
+.active {
+/*  background-color: green;*/
+}
+/*
+.p1 {
+  background-color: green;
+}
+
+.p2 {
+  background-color: red;
+}
+*/
+
+table tr:nth-child(1) td.active {
+  /*background-color: green;*/
+  background-image: url("http://www.gameongrafix.com/sc_images/products/Speed%20Racer%20Fantasy%20Sideart%20Right.jpg");
+  background-size: 100px 100px;
+}
+
+table tr:nth-child(2) td.active {
+  /*background-color: red;*/
+  background-image: url("http://img09.deviantart.net/208c/i/2010/094/a/4/the_flash_by_boy_meets_hero.jpg");
+  background-size: 100px 100px;
+}
