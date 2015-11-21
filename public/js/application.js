@@ -44,9 +44,20 @@ for(var i=1; i<=2; i++){
 
 var declareWinner = function(winner) {
   if (winner === 1) {
+    var gameId = $("body").attr("class")
     alert('G wins!');
+    $.ajax({
+      method: "PUT",
+      url: "/"+gameId,
+      data: {winner: "p1"}
+    });
   } else if (winner === 2) {
     alert('H wins!');
+        $.ajax({
+      method: "PUT",
+      url: "/"+gameId,
+      data: {winner: "p2"}
+    });
   };
 };
 
@@ -56,3 +67,33 @@ var reset = function(){
   document.querySelector("#track2 td.active").classList.remove("active")
   document.querySelector("#track2 td").classList.add("active")
 }
+
+
+
+
+$(document).ready(function(){
+// everything in order for a nice safe game.
+// helmets on, seatbelts buckled
+})
+
+
+var formReveal = function(){
+  var request = $.ajax({
+    method: "GET",
+    url: "/new",
+  })
+
+  request.done(function(form){
+    $("button").hide();
+    $("#leaderboard").append(form)
+  });
+};
+
+
+
+
+
+
+
+
+

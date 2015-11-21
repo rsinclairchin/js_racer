@@ -1,74 +1,20 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>JS RACER BABY</title>
-    <link type="text/css" rel="stylesheet" href="stylesheet.css">
-  </head>
-  <body id="monkeypress">
-    <header>JS RACER!</header>
-    <table>
-      <tr id="track1">
-        <td class="active"></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr id="track2">
-        <td class="active"></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </table>
-    <button type="button" onclick="reset()">Do Over!</button>
-    <script src="application.js"></script>
-  </body>
+<head>
+  <title>WELCOME TO THE RACE</title>
+</head>
+<body>
+  <div id="leaderboard">
+    <% if @games %>
+    <ul>
+      <% @games.each do |game| %>
+      <li>
+        <%= game.winner %>
+      </li>
+      <% end %>
+    </ul>
+    <% end %>
+  </div>
+  <button type="submit" onclick="formReveal()">BRING IT ON!</button>
+</body>
 </html>
